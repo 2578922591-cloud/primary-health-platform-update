@@ -1,0 +1,9 @@
+{
+  "version": "1.0.1",
+  "version_code": 101,
+  "mandatory": false,
+  "title": "测试版 V1.0.1",
+  "notes": "第一次测试整个软件在线升级功能。",
+  "download_url": "",
+  "sha256": ""
+}
