@@ -1,6 +1,6 @@
 ﻿version=0.13.26
 version_code=1326
 channel=test
-source_commit=63180a90102a1e89bd18befb538dcb07fcdbc0a4
+source_commit=8530185f6cf46a5ac7f6f0618a003e60ec93da1f
 branch=feature/local-platform-next
 all_requirements_complete=false

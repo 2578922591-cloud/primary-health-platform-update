@@ -1,0 +1,14 @@
+﻿V0.13.26 在线升级发布验证
+{
+  "current_client_check": true,
+  "simulated_older_client_detects_26": true,
+  "real_download_cancel_removes_partial": true,
+  "real_network_retry_sha256_and_owner_signature": true,
+  "download_bytes": 38163525,
+  "sha256": "b9e2f00819f8be2b2ae7690aa6d5ece0249ba53513dfb4d7fe2e833acdf21d5b",
+  "percent": 100,
+  "stable_unchanged_version": "0.13.24",
+  "passed": true,
+  "scope": "Actual network; older version simulated by version_code=1325. Installer UI handoff not exercised here."
+}
+第一次从24/25升级需手动安装26，之后使用软件更新入口。点击升级至安装完成的人工界面链、PAC/WPAD和物理DPI尚未验收。
