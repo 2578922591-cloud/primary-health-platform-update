@@ -1,9 +1,9 @@
 {
-  "version": "1.0.1",
-  "version_code": 101,
+  "version": "0.13.24",
+  "version_code": 1324,
   "mandatory": false,
-  "title": "测试版 V1.0.1",
-  "notes": "第一次测试整个软件在线升级功能。",
+  "title": "基层医疗智能工作平台 V0.13.24",
+  "notes": "当前受邀测试版本。",
   "download_url": "",
   "sha256": ""
 }
