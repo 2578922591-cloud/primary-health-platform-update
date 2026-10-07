@@ -1,0 +1,11 @@
+{
+  "version": "0.13.26",
+  "version_code": 1326,
+  "channel": "test",
+  "published_at": "2026-10-07",
+  "notes": "六套主题与首页改版；后台在线检查、下载取消重试、所有者签名校验、升级前数据库备份。首次升级请手动运行完整安装包。",
+  "size": 38163525,
+  "sha256": "b9e2f00819f8be2b2ae7690aa6d5ece0249ba53513dfb4d7fe2e833acdf21d5b",
+  "download_url": "https://raw.githubusercontent.com/2578922591-cloud/primary-health-platform-update/refs/heads/feature/local-platform-next/test-packages/v0.13.26/Installer-V0.13.26.exe",
+  "installer_signature": "AkNF2kkKHHjBRheK+3ykQCqmUHpm2GgE+perkRNsn7KssRZ3qURMCpaFjGBfVO7Y4w2re2uhovIsH8XxMWdeCA=="
+}

@@ -1,0 +1,6 @@
+﻿version=0.13.26
+version_code=1326
+channel=test
+source_commit=63180a90102a1e89bd18befb538dcb07fcdbc0a4
+branch=feature/local-platform-next
+all_requirements_complete=false
