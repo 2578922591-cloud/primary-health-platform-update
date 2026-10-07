@@ -1,0 +1,10 @@
+{
+  "version": "0.13.25",
+  "version_code": 1325,
+  "mandatory": false,
+  "title": "V0.13.25 本地离线桌面平台综合完善测试版（阶段交付）",
+  "notes": "临时索引过滤、本机流式导入、缺失资料恢复、普通任务恢复及目录折叠。打印队列、六套主题、台账、模板全面改版及自动更新尚未完成。须所有者逐设备激活，无期限。",
+  "download_url": "https://raw.githubusercontent.com/2578922591-cloud/primary-health-platform-update/refs/heads/feature/local-platform-next/test-packages/v0.13.25/Installer-V0.13.25.exe",
+  "sha256": "bc43e73abe881da654a54f1f746eeaf0bcf27f152d815c0e51bf652179ec4cf2",
+  "channel": "test"
+}

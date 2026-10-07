@@ -1,0 +1,7 @@
+version=0.13.25
+version_code=1325
+channel=test
+database_version=16
+source_commit=45cdf1588fe275792b4792321087f4377de02d7a
+branch=feature/local-platform-next
+all_requirements_complete=false
