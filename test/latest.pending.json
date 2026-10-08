@@ -1,0 +1,11 @@
+{
+  "version": "0.13.27",
+  "version_code": 1327,
+  "channel": "test",
+  "published_at": "2026-10-08",
+  "notes": "新增大项目安全删除：仅业务管理员可删除没有真实文件和业务记录的空项目；双重确认、引用检查、审计记录与失败恢复。",
+  "size": 38164190,
+  "sha256": "206240f9b48b2c6c72eca55919587d240fbbe29bea145049258ca60117ff8dfb",
+  "download_url": "https://raw.githubusercontent.com/2578922591-cloud/primary-health-platform-update/refs/heads/feature/local-platform-next/test-packages/v0.13.27/Installer-V0.13.27.exe",
+  "installer_signature": "OMjAGRLRxu2hyQGRlT3loqzLAltqk8RJfOLXBQmaR3iIv9wBg3XOIajBO7rk/0WlQHrp4kAH01gbclR9QCnKAw=="
+}
