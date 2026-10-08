@@ -1,0 +1,31 @@
+name: Assemble V0.13.28 test package
+on:
+  push:
+    branches: [feature/local-platform-next]
+    paths: [test-packages/v0.13.28/.parts/**]
+permissions:
+  contents: write
+jobs:
+  assemble:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reassemble verify and publish
+        shell: bash
+        run: |
+          set -euo pipefail
+          dir='test-packages/v0.13.28'
+          cat "$dir"/.parts/part.* > "$dir/Installer-V0.13.28.exe"
+          echo '096235c69e345d1a518eacc07b5cb82c6265a112d5d2caba681b46824c8dade5  '"$dir"'/Installer-V0.13.28.exe' | sha256sum -c -
+          (cd "$dir" && zip -q PrimaryHealth-Test-V0.13.28.zip Installer-V0.13.28.exe Installer-V0.13.28.medupdate README_测试操作说明.txt CHANGELOG_版本变更说明.txt TEST_REPORT_测试结果.txt KNOWN_ISSUES_已知问题.txt)
+          ih=$(sha256sum "$dir/Installer-V0.13.28.exe"|cut -d' ' -f1)
+          zh=$(sha256sum "$dir/PrimaryHealth-Test-V0.13.28.zip"|cut -d' ' -f1)
+          printf '%s  Installer-V0.13.28.exe\n%s  PrimaryHealth-Test-V0.13.28.zip\n' "$ih" "$zh" > "$dir/SHA256.txt"
+          rm -rf "$dir/.parts"
+          mv test/latest.pending.json test/latest.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$dir" test/latest.json test/latest.pending.json
+          git commit -m 'Assemble verified V0.13.28 test installer and ZIP'
+          git push

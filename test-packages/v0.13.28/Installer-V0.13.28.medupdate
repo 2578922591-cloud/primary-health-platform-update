@@ -1,0 +1,11 @@
+{
+  "version": "0.13.28",
+  "version_code": 1328,
+  "channel": "test",
+  "published_at": "2026-10-08",
+  "notes": "修复分类删除：永久清除或手动删除后的历史索引不再占用分类；同步删除子分类和真实目录；有资料时可先生成ZIP备份。",
+  "size": 38166591,
+  "sha256": "096235c69e345d1a518eacc07b5cb82c6265a112d5d2caba681b46824c8dade5",
+  "download_url": "https://raw.githubusercontent.com/2578922591-cloud/primary-health-platform-update/refs/heads/feature/local-platform-next/test-packages/v0.13.28/Installer-V0.13.28.exe",
+  "installer_signature": "mplt/5mZe/BS8xD0GcBoPkvXvQVXJN9RVVRe9GKQWePKYkJ2uk3oO1goRPPvTtQiFtTHC1J03gA+l3JYsz7hAw=="
+}
