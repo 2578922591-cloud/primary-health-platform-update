@@ -1,0 +1,11 @@
+node_modules/
+__pycache__/
+*.pyc
+test-mobile.png
+dist/
+*.log
+queue.json
+*.followup
+随访数据_*.json
+高血压随访_*.csv
+糖尿病随访_*.csv
