@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#145C52">
+  <meta name="description" content="高血压、2型糖尿病入户随访离线采集助手">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>随访采集助手</title>
+</head>
+<body>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <section id="lock-screen" class="lock-screen">
+    <div class="brand-mark" aria-hidden="true">访</div>
+    <p class="eyebrow">离线采集 · 本机加密</p>
+    <h1 id="lock-title">设置本地密码</h1>
+    <p id="lock-help" class="muted">请设置至少 6 位密码。密码只用于本机解密，无法找回。</p>
+    <form id="lock-form" class="lock-form">
+      <label>本地密码<input id="pin" type="password" inputmode="numeric" minlength="6" autocomplete="current-password" required></label>
+      <label id="pin-confirm-wrap">再次输入<input id="pin-confirm" type="password" inputmode="numeric" minlength="6" autocomplete="new-password"></label>
+      <button class="primary" type="submit">进入应用</button>
+    </form>
+    <p class="privacy-note">患者信息仅保存在当前设备浏览器内，不发送到网络。</p>
+  </section>
+
+  <div id="app" class="app hidden">
+    <header class="topbar">
+      <div><p class="eyebrow">基本公共卫生</p><h1>随访采集助手</h1></div>
+      <button id="lock-btn" class="icon-btn" aria-label="锁定应用">锁定</button>
+    </header>
+
+    <main>
+      <section id="home-view" class="view active">
+        <div class="hero">
+          <div><p class="hero-kicker">今天的入户随访</p><h2>先采集，再核对，最后录入</h2><p>现场不需要联网。返回电脑后导出记录，交由桥接器生成录入计划。</p></div>
+          <button id="new-btn" class="primary large">新建随访</button>
+        </div>
+        <div class="stats" aria-label="记录统计">
+          <article><strong id="stat-total">0</strong><span>全部记录</span></article>
+          <article><strong id="stat-draft">0</strong><span>待完善</span></article>
+          <article><strong id="stat-ready">0</strong><span>可导出</span></article>
+        </div>
+        <div class="section-head"><div><p class="eyebrow">最近记录</p><h2>本机随访记录</h2></div><button id="export-btn" class="secondary">导出数据</button></div>
+        <div id="record-list" class="record-list"></div>
+      </section>
+
+      <section id="type-view" class="view">
+        <button class="back-link" data-go="home-view">← 返回</button>
+        <p class="eyebrow">新建随访</p><h2>选择随访类型</h2>
+        <div class="type-grid">
+          <button class="type-card" data-type="hypertension"><span class="type-icon coral">压</span><span><strong>原发性高血压</strong><small>症状、体征、生活方式、用药与转诊</small></span><b>开始 →</b></button>
+          <button class="type-card" data-type="diabetes"><span class="type-icon teal">糖</span><span><strong>2 型糖尿病</strong><small>血糖、足背动脉、生活方式、用药与转诊</small></span><b>开始 →</b></button>
+        </div>
+      </section>
+
+      <section id="form-view" class="view">
+        <div class="form-top"><button id="form-back" class="back-link">← 暂存并返回</button><span id="form-kind" class="pill"></span></div>
+        <div class="progress"><span id="progress-bar"></span></div>
+        <div class="step-meta"><p id="step-index" class="eyebrow"></p><h2 id="step-title"></h2><p id="step-help" class="muted"></p></div>
+        <form id="visit-form" novalidate><div id="fields" class="fields"></div></form>
+        <div class="form-actions"><button id="prev-step" class="secondary">上一步</button><button id="next-step" class="primary">下一步</button></div>
+      </section>
+
+      <section id="review-view" class="view">
+        <button id="review-back" class="back-link">← 返回修改</button>
+        <p class="eyebrow">保存前核对</p><h2>确认本次随访信息</h2>
+        <div id="review-errors" class="alert hidden"></div>
+        <div id="review-content" class="review-content"></div>
+        <button id="save-record" class="primary full">加密保存到本机</button>
+      </section>
+
+      <section id="settings-view" class="view">
+        <p class="eyebrow">数据与安全</p><h2>设置</h2>
+        <div class="settings-card"><h3>导出全部记录</h3><p>JSON 用于电脑桥接器；CSV 便于表格核对。</p><div class="button-row"><button id="export-json" class="primary">导出 JSON</button><button id="export-csv" class="secondary">导出 CSV</button></div></div>
+        <div class="settings-card"><h3>加密备份</h3><p>备份包含加密数据，可复制到安全介质保存。</p><button id="export-backup" class="secondary">导出加密备份</button></div>
+        <div class="settings-card danger-zone"><h3>清空本机数据</h3><p>此操作不可恢复，请先导出备份。</p><button id="clear-data" class="danger">清空全部记录</button></div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="主导航">
+      <button class="nav-item active" data-go="home-view">首页</button>
+      <button class="nav-item" data-go="type-view">新建</button>
+      <button class="nav-item" data-go="settings-view">设置</button>
+    </nav>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
+
