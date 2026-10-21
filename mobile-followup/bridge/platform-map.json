@@ -1,0 +1,9 @@
+{
+  "platform":"基本公共卫生服务信息管理平台",
+  "version_hint":"PowerBuilder / d_2019_gxy_sf_info",
+  "verified":false,
+  "save_action":"manual_only",
+  "hypertension":{"window_title":"原发性高血压随访服务","ordered_fields":["visit_date","visit_method","symptom_codes","symptom_other","sbp","dbp","weight_kg","weight_target_kg","bmi","heart_rate","signs_other","smoking_per_day","smoking_target","alcohol_per_day","alcohol_target","exercise_week","exercise_minutes","exercise_target_week","exercise_target_minutes","salt_level","salt_target","mental_adjustment","medical_compliance","aux_exam","med_adherence","adverse_reaction","adverse_detail","visit_class","drug1_name","drug1_times_day","drug1_dose","drug1_unit","drug2_name","drug2_times_day","drug2_dose","drug2_unit","drug3_name","drug3_times_day","drug3_dose","drug3_unit","referral_reason","referral_org_dept","next_visit_date","doctor_name"]},
+  "diabetes":{"window_title":"2型糖尿病随访服务","ordered_fields":["visit_date","visit_method","symptom_codes","symptom_other","sbp","dbp","weight_kg","weight_target_kg","bmi","dorsalis_pedis","signs_other","smoking_per_day","smoking_target","alcohol_per_day","alcohol_target","exercise_week","exercise_minutes","exercise_target_week","exercise_target_minutes","staple_food_g","staple_food_target_g","mental_adjustment","medical_compliance","fasting_glucose","hba1c","hba1c_date","other_exam","med_adherence","adverse_reaction","adverse_detail","hypoglycemia","visit_class","drug1_name","drug1_times_day","drug1_dose","drug1_unit","drug2_name","drug2_times_day","drug2_dose","drug2_unit","drug3_name","drug3_times_day","drug3_dose","drug3_unit","insulin_type","insulin_usage","referral_reason","referral_org_dept","next_visit_date","doctor_name"]}
+}
+
