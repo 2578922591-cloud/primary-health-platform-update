@@ -1,0 +1,12 @@
+{
+  "name":"随访采集助手",
+  "short_name":"随访采集",
+  "description":"高血压、2型糖尿病入户随访离线采集",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#f4f7f5",
+  "theme_color":"#145c52",
+  "icons":[{"src":"icons/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
+
